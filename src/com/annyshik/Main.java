@@ -70,33 +70,34 @@ public class Main {
         for (int num = 0; num <= sum; num++) {
             sumSum += num;
         }
+
         System.out.println("Сумма элементов матрицы равна: " + sumSum);
     }
 
-//    public static void task3(int mass[][], int sum, int n, int m) {
-//        int maxString = (sum < 0) ? -sum : sum;
-//        // или
-//
-//        // Переменной maxString задаем минимальное значение.
-//        int maxString = 0;
-//        // Перебираем все элементы массива.
-//        for (int i = 0; i < n; i++) {
-//            System.out.println();
-//            for (int j = 0; j < m; j++) {
-//                // Переменной maxString с помощью метода Math.maxString() присваиваем максимальное значение
-//                // путем выбора наибольшего из двух значений ("старого" значения maxString и значения элемента).
-//                maxString = Math.max(maxString, mass[i][j]);
-//            }
-//            System.out.println("");
-//        }
-//
-//        // Выводим на экран наибольшее число массива mass.
-//        System.out.println("Максимальный элемент в массиве mass: " + maxString);
-//    }
+    public static void task3(int mass[][], int sum, int n, int m) {
+        int maxString = (sum < 0) ? -sum : sum;
+        // или
+
+        // Переменной maxString задаем минимальное значение.
+        int maxString = 0;
+        // Перебираем все элементы массива.
+        for (int i = 0; i < n; i++) {
+            System.out.println();
+            for (int j = 0; j < m; j++) {
+                // Переменной maxString с помощью метода Math.maxString() присваиваем максимальное значение
+                // путем выбора наибольшего из двух значений ("старого" значения maxString и значения элемента).
+                maxString = Math.max(maxString, mass[i][j]);
+            }
+            System.out.println("");
+        }
+
+        // Выводим на экран наибольшее число массива mass.
+        System.out.println("Максимальный элемент в массиве mass: " + maxString);
+    }
 
     public static void main(String[] args) {
         returnMassive();
         //task1();
-        //task4();
+        task4(sum, sumSum);
     }
 }
