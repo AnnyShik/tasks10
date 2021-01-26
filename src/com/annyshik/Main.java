@@ -63,7 +63,7 @@ public class Main {
         for (int i = 0; i < n; i++) {
             System.out.println();
             for (int j = 0; j < n; j++) {
-                mass[i][j] = random.nextInt(100);
+             //   mass[i][j] = random.nextInt(100);
                 sum += mass[i][j];
                 System.out.print(mass[i][j] + " ");
             }
@@ -78,18 +78,17 @@ public class Main {
     public static int task3(int n, int m) {
         int arr[][] = returnMassive(m, n);
 
-        int mass[][] = new int[n][m];
+      //  int mass[][] = new int[n][m];
         int max = Integer.MIN_VALUE,
                 maxString = -1,
                 sum = 0;
-        getSummOfString(mass, n, max, maxString, sum);
+        maxString = getSummOfString(arr, n, max, maxString, sum);
         System.out.println();
         System.out.println("Номер максимальной строки " + (maxString + 1));
         System.out.print("Состав строки ");
         for (int j = 0; j < n; j++)
-            System.out.print(mass[maxString][j] + " ");
+            System.out.print(arr[maxString][j] + " ");
         System.out.println();
-        System.out.print("Сумма чисел строки: " + max);
         return maxString;
     }
 
@@ -115,6 +114,6 @@ public class Main {
         //task1(m, n);
         //task2(m, n);
         //task3(m, n);
-        //task4(m, n);
+        task4(m, n);
     }
 }
